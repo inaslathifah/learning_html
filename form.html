@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightsteelblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        ::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+        }
+
+        form {
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        address {
+            font-style: normal;
+            color: darkblue;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .form-group {
+            display: block;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .button-group {
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"] {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;          
+        }
+
+        input[type="file"] {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .radio-group {
+            display: contents;
+            gap: 5px;
+            flex-direction: column;
+        }
+
+        select {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;
+        }
+
+        textarea {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran PPKD Jakarta Pusat</h1>
+        <p>Silakan isi formulir pendaftaran berikut:</p>
+
+        <!-- enctype="multipart/form-data" digunakan untuk mengirimkan data file melalui form -->
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <fieldset>
+                    <legend>Informasi Pribadi</legend>
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required><br><br>
+
+                    <label for="hp">Nomor HP:</label>
+                    <input type="tel" id="hp" name="hp" placeholder="Masukkan nomor HP Anda" maxlength="12"
+                        required><br><br>
+
+                    <label for="tanggal_lahir">Tanggal Lahir:</label>
+                    <input type="date" id="tanggal_lahir" name="tanggal_lahir" size="10" required><br><br>
+
+                    <label for="hobi">Hobi:</label>
+                    <select id="hobi" name="hobi" required>
+                        <option value="">Pilih Hobi</option>
+                        <option value="Baca Buku">Baca Buku</option>
+                        <option value="Main Game">Main Game</option>
+                        <option value="Olahraga">Olahraga</option>
+                    </select><br><br>
+
+                    <div class="radio-group">
+                        <label for="jenis_kelamin">Jenis Kelamin:</label><br>
+                        <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
+                        <label for="laki_laki">Laki-laki</label>
+                        
+                        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+                        <label for="perempuan">Perempuan</label><br><br>
+                    </div>
+
+                    <label for="jurusan">Jurusan:</label>
+                    <select id="jurusan" name="jurusan" required>
+                        <option value="">Pilih Jurusan</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknik Elektro">Teknik Elektro</option>
+                    </select> <br><br>
+                    
+                    <label for="alamat">Alamat:</label> 
+                    <textarea id="alamat" name="alamat" rows="2" cols="50" required></textarea><br><br>
+
+                    <label for="foto">Foto:</label>
+                    <input type="file" id="foto" name="foto" accept=".jpg, .jpeg, .png">
+                </fieldset>
+                <br>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" value="Submit"
+                    onclick="return confirm('Apakah Anda yakin ingin mengirimkan form ini?');  ">Submit</button>
+
+                <button type="reset" value="Reset"
+                    onclick="return confirm('Apakah Anda yakin ingin mereset form ini?');">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+ 
