@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const uname = "admin";
+        // switch (uname) {
+        //     case "pimpinan":
+        //         console.log("ini pimpinan");
+        //         break;
+        //     case "kasir":
+        //         console.log("ini kasir");
+        //         break;
+        //     case "admin":
+        //         console.log("ini admin");
+        //         break;
+        //     default:
+        //         break;
+        // }
+
+        // <!-- Tugas -->
+
+        // let berat = 10; // per kilo
+
+        // const kota = "bogor";
+        // if (kota === "bogor") {
+        //     tarifPerKilo = 2000;
+        // } else if (kota === "depok") {
+        //     tarifPerKilo = 4000;
+        // } else {
+        //     tarifPerKilo = 6000;
+        // }
+
+        // let total = berat * tarifPerKilo;
+
+        // console.log("tarifnya sebesar $total");
+
+        // // berat = 10kg
+        // // kota = bogor tarif 2000, depok tarif 4000, luar kota tarif 6000
+        // // total biaya pengiriman = berat paket x tarif per kilo
+        // // tombol cek tarif di klik, sistem menampilkan "tarifnya sebesar 20.000"
+
+        // // let berat = 10; // per kilo
+
+        // // const kota = "jakarta";
+        // // if (kota === "bogor") {
+        // //   tarifPerKilo = 2000;
+        // // } else if (kota === "depok") {
+        // //   tarifPerKilo = 4000;
+        // // } else {
+        // //   tarifPerKilo = 6000;
+        // // }
+
+        // // let total = berat * tarifPerKilo;
+
+        // // console.log("tarifnya sebesar " + total);
+
+        // // // function
+        // // function demoScope() {
+        // //   if (true) {
+        // //     var varVariable = "Saya var (Function Scope)";
+        // //     let letVariable = "Saya let (Block Scope)";
+        // //     const constVariable = "Saya const (Block Scope)";
+        // //   }
+        // //   console.log(varVariable);
+        // //   console.log(letVariable);
+        // //   console.log(constVariable);
+        // // }
+        // // demoScope();
+
+        // // traditional function expression (ES5)
+        // const squareES5 = function (x) {
+        //     return x * x;
+        // };
+        // console.log(squareES5(4));
+
+        // // ARROW Function (ES6+)
+        // const squareES6 = (x) => {
+        //     return x * x;
+        // };
+        // console.log(squareES6(2));
+
+        // const squareES6Implicit = (x) => x * x;
+        // console.log(squareES6Implicit(5));
+
+        // // penggunaan pada method array
+        // const buah = ["apel", "nanas", "durian"];
+        // const squareBuah = buah.map((buahh) => buahh);
+        // console.log(squareBuah[0]);
+
+        // // looping for
+        // for (let index = 1; index < 5; index++) {
+        //     console.log("Perulangan ke- " + index);
+        // }
+
+        // let no = 1;
+        // while (no <= 5) {
+        //     console.log(`ini nomor ke- ${no}`);
+        //     no++;
+        // }
+        // let x = 6;
+        // do {
+        //     console.log(`Nilai x = ${x}`);
+        //     x++;
+        // } while (x <= 5);
+
+        const nama = "Inas";
+        const nilaiTeori = 75;
+        const nilaiPraktek = 80;
+        const kehadiran = 90;
+        const pelanggaranBerat = false;
+
+        const rataRata = (nilaiTeori + nilaiPraktek) / 2;
+
+        let status = "";
+        let keterangan = "";
+
+        if (pelanggaranBerat) {
+            status = "Tidak lulus";
+            keterangan = "Pelanggaran Disiplin";
+        } else if (kehadiran < 90) {
+            status = "Tidak Lulus";
+            keterangan = "Kehadiran Kurang";
+        } else if (nilaiTeori < 75) {
+            status = "Tidak Lulus";
+            keterangan = "Teori Kurang";
+        } else if (nilaiPraktek < 80) {
+            status = "tidak lulus";
+            keterangan = "praktek kurang";
+        } else {
+            if (rataRata > 90) {
+                status = "Lulus";
+                keterangan = "Sangat Baik";
+            } else if (rataRata > 85) {
+                status = "Lulus";
+                keterangan = "Baik";
+            } else {
+                status = "Lulus";
+                keterangan = "cukup";
+            }
+        }
+    </script>
+</body>
+
+</html>
