@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
 </head>
 
 <body>
+    <h1 id="heading" class="heading">Selamaat Datang</h1>
+    <p id="isiText"></p>
+    <h3>lalala</h3>
+    <h3>adads</h3>
+    <h3>werqrdfca</h3>
     <script>
         // const uname = "admin";
         // switch (uname) {
@@ -110,41 +115,226 @@
         //     x++;
         // } while (x <= 5);
 
-        const nama = "Inas";
-        const nilaiTeori = 75;
-        const nilaiPraktek = 80;
-        const kehadiran = 90;
-        const pelanggaranBerat = false;
+        // const nama = "Inas";
+        // const nilaiTeori = 75;
+        // const nilaiPraktek = 80;
+        // const kehadiran = 90;
+        // const pelanggaranBerat = false;
 
-        const rataRata = (nilaiTeori + nilaiPraktek) / 2;
+        // const rataRata = (nilaiTeori + nilaiPraktek) / 2;
 
-        let status = "";
-        let keterangan = "";
+        // let status = "";
+        // let keterangan = "";
 
-        if (pelanggaranBerat) {
-            status = "Tidak lulus";
-            keterangan = "Pelanggaran Disiplin";
-        } else if (kehadiran < 90) {
-            status = "Tidak Lulus";
-            keterangan = "Kehadiran Kurang";
-        } else if (nilaiTeori < 75) {
-            status = "Tidak Lulus";
-            keterangan = "Teori Kurang";
-        } else if (nilaiPraktek < 80) {
-            status = "tidak lulus";
-            keterangan = "praktek kurang";
-        } else {
-            if (rataRata > 90) {
-                status = "Lulus";
-                keterangan = "Sangat Baik";
-            } else if (rataRata > 85) {
-                status = "Lulus";
-                keterangan = "Baik";
-            } else {
-                status = "Lulus";
-                keterangan = "cukup";
-            }
-        }
+        // if (pelanggaranBerat) {
+        //     status = "Tidak lulus";
+        //     keterangan = "Pelanggaran Disiplin";
+        // } else if (kehadiran < 90) {
+        //     status = "Tidak Lulus";
+        //     keterangan = "Kehadiran Kurang";
+        // } else if (nilaiTeori < 75) {
+        //     status = "Tidak Lulus";
+        //     keterangan = "Teori Kurang";
+        // } else if (nilaiPraktek < 80) {
+        //     status = "tidak lulus";
+        //     keterangan = "praktek kurang";
+        // } else {
+        //     if (rataRata > 90) {
+        //         status = "Lulus";
+        //         keterangan = "Sangat Baik";
+        //     } else if (rataRata > 85) {
+        //         status = "Lulus";
+        //         keterangan = "Baik";
+        //     } else {
+        //         status = "Lulus";
+        //         keterangan = "cukup";
+        //     }
+        // }
+
+        // // concanate (+ atau tambah) dianggap Javascript sebagai penggabung string, jadi sistem membacanya 1 + 1 bukan 2 tapi 1 + 1 = 11.
+        // // contoh
+        // const nilai1 = 10;
+        // const nilai2 = 10;
+        // const jumlah = nilai1 + nilai2;
+        // // makanya kalo di javascript ada PARSEINT/ParseInt atau parse integer
+        // // nge-solve-nya berarti menjadi
+        // const nilaiA = parseInt(10);
+        // const nilaiB = parseInt(10);
+
+        // // assignment operator menambahkan nilai ke dalam suatu variable
+        // let total = 100;
+        // total += 50;
+        // total -= 20;
+        // console.log(total);
+
+        // //  operator increment (menambah) dan decrement (mengurang)
+        // let nomor = 1;
+        // // ini contoh increment
+        // nomor++;
+        // // ini contoh decrement
+        // nomor--;
+
+        // // operator perbandingan = <= (lebih kecil sama dengan), >= (lebih besar sama dengan), === (membandingkan sampai ke tipe datanya), == (membandingkan), !== (tidak sama dengan)
+        // let nama = "10";
+        // let konfirmasiNama = 10;
+        // let konfirmasi = (nama === konfirmasiNama); //hasilnya false, karena mengeceknya sampai ke tipe datanya (string & integer), kecuali kalau
+        // let nama1 = "inas";
+        // let confirmasiNama = "inas";
+        // let konfirmasi1 = (nama1 === konfirmasiNama);
+
+
+        // // operator logika, &&(dan) , ||(OR) , !(tidak)
+        // let budi = "Budi";
+        // let andi = "Andi";
+
+        // let usname = "admin";
+        // let pass = "admin";
+        // (usname === "admin123" && pass === "admin123"); //login gagal, kecuali kalau
+        // (usname === "admin" || pass === "admin123"); //login berhasil //makanya kalau membuat auth login harus pake operator &&
+
+        // // operator ternary
+        // const age = 20;
+        // // if else pada umumnya
+        // if (age >= 17) {
+        //     console.log('dewasa');
+        // } else {
+        //     console.log('anak-anak');
+        // }
+
+        // // kalau pake ternary hasilnya seperti ini:
+        // const statusAge = age >= 17 ? 'dewasa' : 'anak-anak'
+        // console.log(statusAge); //jadi lebih ringkas
+
+        // // if statement
+        // const color = "Pink";
+        // if (color !== "Pink") {
+        //     console.log("Iya betul");
+        // } else {
+        //     console.log("bukan");
+        // }
+
+        // banyak if(if, else if, else), pengecekkan banyak statement dan kondisi
+        // const totalBelanja = 1000000;
+        // const isMember = false;
+        // let discount = 0;
+
+        // if (isMember || totalBelanja >= 2000000) {
+        //     discount = 0.1;
+        // } else if (totalBelanja >= 500000) {
+        //     discount = 0.2;
+        // } else {
+        //     persen = discount;
+        // }
+
+        // const potongan = totalBelanja * discount;
+        // const bayar = totalBelanja - potongan;
+
+        // // templet literal atau `` backtik
+        // console.log(`potongan harga: ${potongan}`);
+        // console.log(`total bayar: ${bayar}`);
+
+        // // switch
+        // const color = "Biru";
+        // switch (color) {
+        //     case "Biru":
+        //         console.log("biru");
+        //         break;
+        //     case "merah":
+        //         console.log("merah");
+        //         break;
+        //     default:
+        //         console.log("bukan keduanya");
+        // }
+
+        // // for, foreach, while, do-while
+        // for (let i = 0; i < 10; i++) {
+        //     console.log(`Nilai variabel ${i}`);
+        // }
+
+        // // array = struktur data yang bisa menyimpan data lebih dari 1
+        // // const nama2 = "budi, laras, andi";
+        // let nama2 = ["Budi", "Laras", "Andi"];
+        // const keranjang = ["Buah", "Sayuran", "Ikan"];
+        // nama2[2] = "Agung";
+        // console.log(`${nama2[2]} ${keranjang[1]}`);
+        // nama2.unshift("Rozak"); // nambahin di depan
+        // nama2.push("Rakha"); // nambahin di belakang
+        // // spread operator = ...
+        // nama2 = ["Wawan", ...nama2, "Maman"];
+        // console.log(`nama baru ${nama2}`);
+
+        // // indexOf = method atau function
+        // const target = nama2.indexOf("Budi");
+        // console.log(target);
+
+        // // length = panjang array
+        // const total = nama2.length;
+        // const totalKeranjang = keranjang.length;
+        // console.log(nama2.length);
+
+        // object = struktur data yang menggunakan simbol {}
+
+        const heading = document.querySelector('h1');
+        // const heading = document.querySelector('h1'); 
+        // (bisa pake hash (#) seperti #heading)
+        // (bisa pake object (.) seperti .heading)
+        // (bisa pake element seperti h1)
+        const headingID = document.getElementById('heading');
+        const headingClass = document.getElementsByClassName('heading');
+        const heading2 = document.querySelector('h3');
+        const headingAll = document.querySelectorAll('h3');
+        console.log(headingAll);
+
+        document.getElementById('isiText').innerText = "PPKD Jakarta Pusat";
+        heading2.innerText = "DUAR"
+
+        heading.innerText = "Selamat Datang" // innerText
+        heading.textContent = "Selamat Datang"// textContent
+        heading.innerHTML = "Selamat Datang </b>"// innerHtml
+
+        let a = {
+            nama3: "Inas",
+            alamat: "Jalan",
+            jurusan: "IT",
+        };
+        console.log(a.nama3);
+        console.log(a.jurusan);
+        console.log(a["alamat"]);
+        a.nilai = 90;
+        delete a.alamat;
+        a["email"] = "inas@gmail.com";
+        console.log(a);
+
+        const siswa = [
+            {
+                id: 1,
+                nama4: "Rakha",
+                nilai1: 80,
+            },
+            {
+                id: 2,
+                nama4: "Bagus",
+                nilai1: 50,
+            },
+            {
+                id: 3,
+                nama4: "Sani",
+                nilai1: 75,
+            },
+        ];
+
+        console.log(siswa);
+        // siswa.forEach(function(data, index){
+        //      console.log("siswa", data)}); // function biasa
+        siswa.forEach((data, index) => {
+            console.log(`data siswa dengan index ${index} yaitu bernama ${data.nama4}`); // dengan menggunakan arrow function
+        }); //looping forEach
+
+        const siswaLulus = siswa.filter((s) => {
+            return s.nilai1 >= 70;
+        });
+
+        console.log(siswaLulus);
     </script>
 </body>
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="title">teks awal</b></h1>
+    <h2 id="description">deskripsi awal</h2>
+    <p id="status">status awal</p>
+
+    <div id="modul">
+        <ul id="modulUl">
+
+        </ul>
+    </div>
+    <script>
+        const body = document.body;
+        const title = document.getElementById('title')
+        const desc = document.getElementById('description')
+        const status = document.querySelector('#status')
+
+        body.style.backgroundColor = "pink";
+        title.style.color = "black";
+        title.innerText = "PPKD JAKPUS";
+        desc.style.color = "black";
+        desc.innerText = "Hello World!";
+        status.style.color = "black";
+        status.innerText = "Tersertifikasi BNSP";
+
+        const listUnit = [
+            "J.620100.010.01 - Implementasi UI",
+            "J.620100.040.02 - Instalasi Software Tools Pemrograman",
+        ]
+
+        // create element
+        const modul = document.getElementById('modul')
+        const modulUl = document.getElementById('modulUl')
+        // createElement():
+        listUnit.forEach((unitText) => {
+            const itemLi = document.createElement('li')
+            itemLi.innerText = unitText;
+            itemLi.style.marginBottom = "8px";
+
+            modulUl.appendChild(itemLi);
+        })
+
+        const isiModul = document.createElement('p')
+        isiModul.innerText = "Laravel adalah framework php";
+        isiModul.style.color = "white";
+        modul.appendChild(isiModul)
+    </script>
+</body>
+
+</html>
