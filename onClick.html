@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Todo List</title>
+</head>
+
+<body>
+    <h2>Daftar Rencana Kerja</h2>
+    <input type="text" id="task" placeholder="Masukan Tugas Baru">
+
+    <button id="tambah">Tambah</button>
+    <ul id="tasks">
+
+    </ul>
+    <script>
+        const taskName = document.getElementById('task')
+        const listTasks = document.getElementById('tasks')
+
+        function createTask() {
+            const task = taskName.value
+            if (task === "") {
+                taskName.focus()
+                alert('APAA ??? MASBULOH ?')
+                return
+            }
+
+            // createElement Li = untuk menambahkan bulet
+            const li = document.createElement('li')
+
+            // menambahkan list
+            li.innerText = task
+
+            // menambahkan kedalam html
+            li.innerHTML = `
+                <span>${task}</span>
+                <button class="btn-del">Hapus</button>
+            `
+            listTasks.appendChild(li)
+            taskName.value = ""
+        }
+
+        document.getElementById('tambah').addEventListener('click', () => {
+            createTask()
+        })
+
+        // agar tombol Enter di keyboard bisa digunakan
+        taskName.addEventListener('keyup', (e) => {
+            if (e.key == "Enter") {
+                createTask()
+            }
+        })
+
+        // button untuk menghapus list
+        listTasks.addEventListener('click', (e) => {
+            // di cek ada atau tidak si element yang mendukung kata class btn-del
+            if (e.target.classList.contains('btn-del')) {
+                const li = e.target.parentElement
+                li.remove()
+            }
+        })
+    </script>
+</body>
+
+</html>
